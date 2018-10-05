@@ -69,6 +69,7 @@ main,body  {
     width: 20%;
     color: #ffffff;
     border-radius: 30px;
+    user-select: none;
 }
 
 #control-down {
@@ -80,7 +81,8 @@ main,body  {
     height: 80%;
     width: 20%;
     color: #ffffff;
-    border-radius: 30px;    
+    border-radius: 30px;
+    user-select: none;    
 }
 
 #player #affiliation {
