@@ -20,6 +20,8 @@ main,body  {
     background-repeat: no-repeat;
     background-position: center;
     border-radius: 10px;
+    user-select: none;
+    -moz-user-select: none;    
 }
 
 #player #life {
@@ -71,8 +73,6 @@ main,body  {
     width: 20%;
     color: #ffffff;
     border-radius: 30px;
-    user-select: none;
-    -moz-user-select: none;        
 }
 
 #control-down {
@@ -85,8 +85,7 @@ main,body  {
     width: 20%;
     color: #ffffff;
     border-radius: 30px;
-    user-select: none;
-    -moz-user-select: none;    
+
 }
 
 #player #affiliation {
