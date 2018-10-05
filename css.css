@@ -19,6 +19,7 @@ main,body  {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+    background-image: url('https://proxy.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F5b%2F8d%2F35%2F5b8d354c534c5f4f3404c84a12d892eb.jpg&f=1');
     border-radius: 10px;
     user-select: none;
     -moz-user-select: none;    
@@ -34,15 +35,18 @@ main,body  {
 }
 
 #player #life #total {
-    width: 33%;
+    min-width: 33%;
     height: 20%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin-bottom: 55px;
+    font-weight: bold;
+    font-family: sans;
     font-size: 5em;
     color: #ffffff;
-    background-color: hsla(100, 5%, 25%, 0.25);
+    background-color: hsla(100, 5%, 25%, 0.45);
     border-radius: 5px;
 }
 
@@ -55,7 +59,7 @@ main,body  {
     justify-content: space-evenly;
 }
 
-#player #life #control #control-up,#control-down {
+#player #life #control #control-up,#control-down,#infect {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -71,7 +75,6 @@ main,body  {
     background-position: center;
     height: 80%;
     width: 20%;
-    color: #ffffff;
     border-radius: 30px;
 }
 
@@ -83,9 +86,16 @@ main,body  {
     background-color: white;
     height: 80%;
     width: 20%;
-    color: #ffffff;
     border-radius: 30px;
+}
 
+#infect {
+    background-color: hsla(100, 5%, 25%, 0.33);
+    height: 80%;
+    width: 20%;
+    color: red;    
+    border-radius: 5px;
+    font-size: 2em;
 }
 
 #player #affiliation {
@@ -99,5 +109,8 @@ main,body  {
 .tile {
     height: 90%;
     width: 15%;
-    border-radius: 5px;
+    border-radius: 30px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
