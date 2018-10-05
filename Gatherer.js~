@@ -1,0 +1,56 @@
+class Game {
+    constructor() {
+	this.players = [],
+	this.currentPlayer = {}
+    }
+
+    addPlayer(name,color) {
+	this.players.push(new Player(name,color));
+	this.render();
+    }
+
+    render() {
+	document.getElementById('players').innerHTML = "";	
+	this.players.map(this.makePlayerElement);
+    }
+
+    selector(player) {
+	this.currentPlayer = player;
+	document.getElementById('name').innerHTML = `${this.currentPlayer.name}`;
+	document.getElementById('total').innerHTML = `${this.currentPlayer.life}`;
+	document.getElementById('control-up').addEventListener('click',this.currentPlayer.increment);
+	document.getElementById('control-down').addEventListener('click',this.currentPlayer.decrement);
+    }
+
+    makePlayerElement(person) {
+	let selector = this.selector;
+	let player = document.createElement('div');
+	player.className = 'player-small';
+	let playerName = document.createElement('p');
+	playerName.innerHTML = `${person.name}`;
+	player.append(playerName);
+	let playerLife = document.createElement('p');
+	playerLife.innerHTML = `${person.life}`;
+	player.append(playerLife);
+	player.addEventListener('click',selector(person));
+	document.getElementById('players').append(player);
+    }
+}
+
+class Player {
+    constructor(name,color) {
+	this.name = name;
+	this.color = color;
+	this.life = 20;
+    }
+
+    increment() {
+	this.life++;
+//	Game.selector(this);
+    }
+
+    decrement() {
+	this.life--;
+//	Game.selector(this);
+    }
+}

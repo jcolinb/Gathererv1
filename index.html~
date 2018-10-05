@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css.css">
+    <title>Gatherer</title>
+  </head>
+  <body>
+    <main>
+      <div id="player">
+	<div id="life">
+	  <div id="name"></div>
+	  <div id="total"></div>
+	  <div id="control">
+	    <div id="control-up">UP</div><div id="control-down">DOWN</div>
+	  </div>
+	</div>
+      </div>
+      <div id="players">
+      </div>
+    </main>
+    <script src="Gatherer.js"></script>
+  </body>
+</html>
